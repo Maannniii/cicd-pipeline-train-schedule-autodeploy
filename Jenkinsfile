@@ -75,9 +75,6 @@ pipeline {
             when {
                 branch 'master'
             }
-            environment { 
-                CANARY_REPLICAS = 0
-            }
             steps {
                 milestone(1)
                 kubernetesDeploy(
